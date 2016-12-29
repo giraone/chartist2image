@@ -12,8 +12,8 @@ Let me start, with how to convert a SVG to a bitmap within a modern browser. The
 
 One can see here, that both solution are working with "normal" SVG files:
 
-- [canvg](svg2image-with-canvg.html)
-- [SVG2Bitmap](svg2image-with-svg2bitmap.html)
+- [svg2image-with-canvg.html](https://www.giraone.com/public/chartist2image/svg2image-with-canvg.html)
+- [svg2image-with-svg2bitmap.html](https://www.giraone.com/public/chartist2image/svg2image-with-svg2bitmap.html)
 
 ## Chartist.js to bitmap
 
@@ -30,7 +30,7 @@ for us in [parseStyles](https://github.com/Kaiido/SVG2Bitmap/blob/master/SVG2Bit
 
 2. I saw, that the conversion using *SVGBitmap* worked in IE11, because the library has a fallback to use plain SVG with 
 `<text class="ct-label">A label</text>`. So we have to force chartist.js not to use `<foreignObject>`. This can be done
-a plugin:
+using a plugin:
 
 ````javascript
 function SuppressForeignObjectPlugin(chart) {
@@ -50,16 +50,20 @@ function SuppressForeignObjectPlugin(chart) {
   new Chartist.Line('.ct-chart', data, options);
 ```
 
-So now there is a working solution. It may happen, that one has to tweak the styles a little, because the *parseStyles* function
-of *SVGBitmap* needs some explicit styles. For my line chart I has to add the following styles:
+So now there is a working solution. One can look at the step-by-step process using this [test page](https://www.giraone.com/public/chartist2image/chartist2image-step-by-step.html)
+
+I have tested it only so far with the charts I am using. It may happen, that one has to tweak the CSS styles a little, because the *parseStyles* function of *SVGBitmap* needs some explicit styles. For my line chart, I had to add explicitly the following styles:
 
 ````css
 .ct-series { fill: none; }
 .ct-label { font-family: Arial, Helvetica, sans-serif; }
 ````
 
-Especially the first one is absolutely necessary, because otherwise the lines are closed and filled.
+Especially the first one is absolutely necessary, because otherwise the SVG lines are closed and filled.
 
-And here is an example with a [line chart](chartist2image-with-svg2bitmap.html).
+And here is an example with a [line chart](https://www.giraone.com/public/chartist2image/chartist2image-with-svg2bitmap.html), I have used for testing. It consists of
+- the <svg> element chartist.js is using
+- a <canvas> element, to which *SVGBitmap* writes
+- an <img> element, that receives the `toDataURL()` content.
 
 
