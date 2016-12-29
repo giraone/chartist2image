@@ -12,8 +12,8 @@ Let me start, with how to convert a SVG to a bitmap within a modern browser. The
 
 One can see here, that both solution are working with "normal" SVG files:
 
-- [svg2image-with-canvg.html](https://www.giraone.com/public/chartist2image/svg2image-with-canvg.html)
-- [svg2image-with-svg2bitmap.html](https://www.giraone.com/public/chartist2image/svg2image-with-svg2bitmap.html)
+- [svg2image-with-canvg.html](http://www.giraone.com/public/chartist2image/svg2image-with-canvg.html)
+- [svg2image-with-svg2bitmap.html](http://www.giraone.com/public/chartist2image/svg2image-with-svg2bitmap.html)
 
 ## Chartist.js to bitmap
 
@@ -50,7 +50,7 @@ function SuppressForeignObjectPlugin(chart) {
   new Chartist.Line('.ct-chart', data, options);
 ```
 
-So now there is a working solution. One can look at the step-by-step process using this [test page](https://www.giraone.com/public/chartist2image/chartist2image-step-by-step.html)
+So now there is a working solution. One can look at the step-by-step process using this [test page](http://www.giraone.com/public/chartist2image/chartist2image-step-by-step.html)
 
 I have tested it only so far with the charts I am using. It may happen, that one has to tweak the CSS styles a little, because the *parseStyles* function of *SVGBitmap* needs some explicit styles. For my line chart, I had to add explicitly the following styles:
 
@@ -61,7 +61,7 @@ I have tested it only so far with the charts I am using. It may happen, that one
 
 Especially the first one is absolutely necessary, because otherwise the SVG lines are closed and filled.
 
-And here is an example with a [line chart](https://www.giraone.com/public/chartist2image/chartist2image-with-svg2bitmap.html), I have used for testing. It consists of
+And here is an example with a [line chart](http://www.giraone.com/public/chartist2image/chartist2image-with-svg2bitmap.html), I have used for testing. It consists of
 - the <svg> element chartist.js is using
 - a <canvas> element, to which *SVGBitmap* writes
 - an <img> element, that receives the `toDataURL()` content.
