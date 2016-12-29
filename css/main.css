@@ -1,0 +1,10 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* This is missing in chartist.css */
+.ct-series { fill: none; }
+.ct-label { font-family: Arial, Helvetica, sans-serif; }

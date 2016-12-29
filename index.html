@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Chartist and SVG to image tests</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <h3>Chartist and SVG to image tests</h3>
+        <ul>
+          <li><a href="svg2image-with-canvg.html">Convert an SVG to an image using canvg</a><br />
+            <i>Works in all modern browsers</i></li>
+          <li><a href="svg2image-with-svg2bitmap.html">Convert an SVG to an image using SVG2Bitmap</a><br />
+            <i>Works in all modern browsers</i></li>
+          <li><a href="svg2image-with-imgload.html">Convert an SVG to an image by loading its SVG code into an &lt;img&gt; element using image/svg+xml</a><br />
+            <i>Works in all modern browsers</i></li>
+          <li><a href="chartist2image-step-by-step.html">Step-by-step solution for chartist.js charts</a><br />
+            <i>This shows the problems of the chartist.js SVG code in different browsers.</i></li>
+          <li><a href="chartist2image-with-svg2bitmap.html">Convert a chartist.js chart to an image by using SVG2Bitmap and suppressing &lt;foreignObject&gt;</a><br />
+            <i>A combined solution, that should work in all modern browsers
+            <ul>
+              <li>Except IE11, because <code>dataURL</code> doesn't work.</li>
+            </ul></i></li>
+        </ul>
+    </body>
+</html>

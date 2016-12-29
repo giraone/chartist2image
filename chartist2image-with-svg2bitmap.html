@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Chartist2Image with SVG2Bitmap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+    </head>
+    <body>
+        <h3>Chartist2Image with SVG2Bitmap</h3>
+
+        <div id="chart" class="ct-chart"></div>
+        <br />
+        <button id="button1">Convert chartist.js chart to canvas</button>
+        <br />
+        <canvas id="canvas" style="width:300px; height:200px; background-color: #F0F0F0;"></canvas>
+        <br />
+        <button id="button2">Convert canvas to image</button>
+        <br />
+        <img id="image" style="width:300px; height:200px; background-color: #F0F0F0;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+
+        <script src="bower_components/chartist/dist/chartist.min.js"></script>
+        <script src="bower_components/SVG2Bitmap/SVG2Bitmap.js"></script>
+        <script src="js/create-chart.js"></script>
+        <script src="js/chartist2image-with-svg2bitmap.js"></script>
+    </body>
+</html>

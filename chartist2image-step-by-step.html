@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Chartist2Image</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+    </head>
+    <body>
+        <h3>Chartist2Image</h3>
+
+        <table style="width:100%">
+          <tr>
+            <td>With &lt;foreignObject&gt;</td>
+            <td>Without &lt;foreignObject&gt;</td>
+            <td>Without &lt;foreignObject&gt; and with inline styles</td>
+          </tr>
+          <tr>
+            <td><div id="chart1" class="ct-chart"></div></td>
+            <td><div id="chart2" class="ct-chart"></div></td>
+            <td><div id="chart3" class="ct-chart"></div></td>
+          </tr>
+          <tr>
+            <td><button id="button1">Convert to image</button></td>
+            <td><button id="button2">Convert to image</button></td>
+            <td><button id="button3">Convert to image</button></td>
+          </tr>
+          <tr>
+            <td><img id="image1" style="width:300px; height:200px; background-color: #F0F0F0;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></td>
+            <td><img id="image2" style="width:300px; height:200px; background-color: #F0F0F0;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></td>
+            <td><img id="image3" style="width:300px; height:200px; background-color: #F0F0F0;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></td>
+          </tr>
+          <tr>
+            <td><textarea id="code1" style="width:100%; height:200px; font-size: 50%; background-color: #E0E0E0; overflow: scroll; word-wrap: break-word;"></textarea></td>
+            <td><textarea id="code2" style="width:100%; height:200px; font-size: 50%; background-color: #E0E0E0; overflow: scroll; word-wrap: break-word;"></textarea></td>
+            <td><textarea id="code3" style="width:100%; height:200px; font-size: 50%; background-color: #E0E0E0; overflow: scroll; word-wrap: break-word;"></textarea></td>
+          </tr>
+        </table>
+
+        <script src="bower_components/chartist/dist/chartist.min.js"></script>
+        <script src="bower_components/SVG2Bitmap/SVG2Bitmap.js"></script>
+        <script src="js/create-chart.js"></script>
+        <script src="js/chartist2image-step-by-step.js"></script>
+    </body>
+</html>
