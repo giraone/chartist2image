@@ -66,4 +66,5 @@ And here is an example with a [line chart](http://www.giraone.com/public/chartis
 - a <canvas> element, to which *SVGBitmap* writes
 - an <img> element, that receives the `toDataURL()` content.
 
+The important JavaScript code is [here](js/chartist2image-with-svg2bitmap.js).
 
