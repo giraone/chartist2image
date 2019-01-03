@@ -48,7 +48,7 @@ function SuppressForeignObjectPlugin(chart) {
   };
 
   new Chartist.Line('.ct-chart', data, options);
-```
+````
 
 So now there is a working solution. One can look at the step-by-step process using this [test page](http://www.giraone.com/public/chartist2image/chartist2image-step-by-step.html)
 
